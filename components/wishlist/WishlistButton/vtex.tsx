@@ -4,7 +4,7 @@ import { useWishlist } from "apps/vtex/hooks/useWishlist.ts";
 import { useUser } from "apps/vtex/hooks/useUser.ts";
 
 export interface Props {
-  productID: string;
+  productID?: string;
   productGroupID?: string;
   variant?: "icon" | "full";
 }
@@ -32,7 +32,8 @@ function WishlistButton({
       productGroupID={productGroupID}
       productID={productID}
       removeItem={() => removeItem({ id: listItem.value!.id }!)}
-      addItem={() => addItem({ sku: productID, productId: productGroupID })}
+      addItem={() =>
+        addItem({ sku: productID ?? "", productId: productGroupID ?? "" })}
     />
   );
 }
