@@ -4,7 +4,7 @@ import Button from "$store/components/ui/Button.tsx";
 import { sendEvent } from "$store/sdk/analytics.tsx";
 
 export interface Props {
-  productID: string;
+  productID?: string;
   productGroupID?: string;
   variant?: "icon" | "full";
   removeItem: () => Promise<void>;
