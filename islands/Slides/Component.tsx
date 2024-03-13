@@ -13,16 +13,18 @@ export interface Props {
 export default function Component({ slides }: Props) {
   return (
     <>
-      <div className="carousel w-full lg:container flex justify-center lg:max-w-7xl lg:mx-auto mx-5 md:mx-10">
+      <div className="carousel w-full">
         {slides.map((images, index) => (
           <div
             id={"slide" + index}
-            className="carousel-item relative w-full flex justify-center"
+            className="carousel-item relative w-full"
           >
-            <div class="flex justify-center items-center w-full gap-4">
+            <div class="flex justify-around items-center w-full">
               {images.map((image, index) => (
-                <div class="w-[50%] h-60 flex rounded-[33px] bg-primary-500">
-                </div>
+                <img
+                  src={image.image}
+                  className="w-32"
+                />
               ))}
             </div>
             <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
