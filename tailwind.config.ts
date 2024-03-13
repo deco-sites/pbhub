@@ -7,6 +7,9 @@ export default {
   theme: {
     container: { center: true },
     extend: {
+      animation: {
+        sliding: "sliding 30s linear infinite",
+      },
       colors: {
         primary: {
           50: "#F4F0F6",
@@ -38,9 +41,6 @@ export default {
         gray: {
           100: "#e6e8e6",
         },
-      },
-      animation: {
-        sliding: "sliding 30s linear infinite",
       },
       keyframes: {
         sliding: {

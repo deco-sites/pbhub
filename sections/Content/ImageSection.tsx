@@ -4,6 +4,7 @@ import Image from "apps/website/components/Image.tsx";
 
 export interface Props {
   title: string;
+  subtitle?: string;
   /**
    * @format textarea
    */
@@ -55,7 +56,7 @@ export default function ImageSection({
           <p class="text-[40px] leading-[110%] font-semibold">
             {title}
           </p>
-          <p class="text-zinc-400 text-[16px] md:text-[18px] leading-[150%]">
+          <p class="text-primary text-[16px] md:text-[18px] leading-[150%]">
             {description}
           </p>
           {cta?.href && cta?.text && (
