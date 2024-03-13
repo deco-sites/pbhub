@@ -4,7 +4,7 @@ import Button from "$store/components/ui/Button.tsx";
 import { sendEvent } from "$store/sdk/analytics.tsx";
 
 export interface Props {
-  productID: string;
+  productID?: string;
   productGroupID?: string;
   variant?: "icon" | "full";
   removeItem: () => Promise<void>;
@@ -38,7 +38,7 @@ function ButtonCommon({
         e.preventDefault();
 
         if (!isUserLoggedIn) {
-          window.alert("Please log in before adding to your wishlist");
+          globalThis.alert("Please log in before adding to your wishlist");
 
           return;
         }
