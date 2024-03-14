@@ -15,7 +15,13 @@ import NavItem from "./NavItem.tsx";
 import { navbarHeight } from "./constants.ts";
 import { Buttons, Logo } from "$store/components/header/Header.tsx";
 
-function Navbar({ items, searchbar, logo, buttons, logoPosition = "left" }: {
+function Navbar({
+  items,
+  searchbar,
+  logo,
+  buttons,
+  logoPosition = "left",
+}: {
   items: SiteNavigationElement[];
   searchbar?: SearchbarProps;
   logo?: Logo;
@@ -60,14 +66,7 @@ function Navbar({ items, searchbar, logo, buttons, logoPosition = "left" }: {
       </div>
 
       {/* Desktop Version */}
-      <div class="hidden lg:grid lg:grid-cols-3 items-center border-b border-base-200 w-full px-6">
-        <div
-          class={`flex gap-6 col-span-1 ${
-            logoPosition === "left" ? "justify-center" : "justify-start"
-          }`}
-        >
-          {items.map((item) => <NavItem item={item} />)}
-        </div>
+      <div class="hidden lg:flex lg:items-center justify-center items-center border-b border-base-200 w-full ">
         <div
           class={`flex ${
             logoPosition === "left"
@@ -76,11 +75,7 @@ function Navbar({ items, searchbar, logo, buttons, logoPosition = "left" }: {
           }`}
         >
           {logo && (
-            <a
-              href="/"
-              aria-label="Store logo"
-              class="block"
-            >
+            <a href="/" aria-label="Store logo" class="block">
               <Image
                 src={logo.src}
                 alt={logo.alt}
@@ -90,7 +85,12 @@ function Navbar({ items, searchbar, logo, buttons, logoPosition = "left" }: {
             </a>
           )}
         </div>
-        <div class="flex-none flex items-center justify-end gap-6 col-span-1">
+        <div class={`flex gap-6`}>
+          {items.map((item) => <NavItem item={item} />)}
+        </div>
+
+        {
+          /* <div class="flex-none flex items-center justify-end gap-6 col-span-1">
           {!buttons?.hideSearchButton && (
             <div class="flex items-center text-xs font-thin gap-1">
               <SearchButton />SEARCH
@@ -132,7 +132,8 @@ function Navbar({ items, searchbar, logo, buttons, logoPosition = "left" }: {
               {platform === "nuvemshop" && <CartButtonNuvemshop />}
             </div>
           )}
-        </div>
+        </div> */
+        }
       </div>
     </>
   );
