@@ -10,13 +10,6 @@ export default {
       animation: {
         sliding: "sliding 30s linear infinite",
       },
-      keyframes: {
-        sliding: {
-          "0%": { transform: "translateX(0)" },
-          "100%": { transform: "translateX(-50%)" },
-        },
-      },
-
       colors: {
         primary: {
           50: "#F4F0F6",
@@ -41,6 +34,18 @@ export default {
           700: "#A82C20",
           800: "#822218",
           900: "#5C1710",
+        },
+        orange: {
+          500: "#f96358",
+        },
+        gray: {
+          100: "#e6e8e6",
+        },
+      },
+      keyframes: {
+        sliding: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-50%)" },
         },
       },
     },

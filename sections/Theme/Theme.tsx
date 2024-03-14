@@ -206,11 +206,11 @@ const toVariables = (
 };
 
 const defaultTheme = {
-  "primary": "oklch(1 0 0)",
+  "primary": "#3b115d",
   "secondary": "oklch(1 0 0)",
   "tertiary": "oklch(1 0 0)",
   "neutral": "oklch(1 0 0)",
-  "base-100": "oklch(1 0 0)",
+  "base-100": "#e6e8e6",
   "info": "oklch(1 0 0)",
   "success": "oklch(0.9054 0.1546 194.7689)",
   "warning": "oklch(1 0 0)",
