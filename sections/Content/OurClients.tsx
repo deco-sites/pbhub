@@ -86,5 +86,14 @@ export default function OurClients({
     ],
   ],
 }: OurClientsProps) {
-  return <Slides slides={slides} />;
+  return (
+    <>
+      <div class="py-24">
+        <h1 class="mb-8 text-3xl text-primary-500 font-semibold text-center">
+          {title}
+        </h1>
+        <Slides slides={slides} />
+      </div>
+    </>
+  );
 }

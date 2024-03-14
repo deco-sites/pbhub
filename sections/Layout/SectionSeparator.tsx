@@ -1,12 +1,13 @@
 interface Props {
   direction?: "top" | "bottom";
-  variant?: "primary" | "secondary";
+  variant?: "primary" | "secondary" | "accent";
   rotate?: boolean;
 }
 
 const COLORS = {
   primary: "fill-primary-500",
   secondary: "fill-white",
+  accent: "fill-gray-200",
 };
 
 const VARIANTS = {
@@ -17,6 +18,7 @@ const VARIANTS = {
 const BACKGROUNDS = {
   primary: "bg-white",
   secondary: "bg-gray-100",
+  accent: "bg-white",
 };
 
 export default function SectionSeparator({
