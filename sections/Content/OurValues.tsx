@@ -42,7 +42,7 @@ export default function OurValues({
   ],
 }: Props) {
   return (
-    <div class="w-full p-2 text-center">
+    <div class="py-16 bg-gray-200 w-full p-2 text-center">
       <div class="max-w-5xl mx-auto">
         <Title title={title} />
         <Container>
@@ -77,7 +77,7 @@ function Card({ label, icon }: CardProps) {
 }
 
 function Title({ title }: { title: string }) {
-  return <h1 class="text-3xl font-semibold text-primary-500">{title}</h1>;
+  return <h1 class="pb-8 text-3xl font-semibold text-primary-500">{title}</h1>;
 }
 
 interface ContainerProps {

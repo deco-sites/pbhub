@@ -1,5 +1,4 @@
 import { ImageWidget } from "apps/admin/widgets.ts";
-import { signal } from "@preact/signals";
 
 export type Slide = Array<{
   title: string;
@@ -9,6 +8,16 @@ export type Slide = Array<{
 export interface Props {
   slides: Slide[];
 }
+
+const scrollToSlide = (index: number) => {
+  return (event: Event) => {
+    event?.preventDefault();
+    document.querySelector(`#slide${index}`)?.scrollIntoView({
+      behavior: "smooth",
+      block: "nearest",
+    });
+  };
+};
 
 export default function Component({ slides }: Props) {
   return (
@@ -29,15 +38,18 @@ export default function Component({ slides }: Props) {
             </div>
             <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
               <a
-                href={"#slide" +
-                  (index - 1 < 0 ? slides.length - 1 : index - 1)}
                 className="btn btn-circle"
+                onClick={scrollToSlide(
+                  index - 1 < 0 ? slides.length - 1 : index - 1,
+                )}
               >
                 ❮
               </a>
               <a
-                href={"#slide" + (index + 1 >= slides.length ? 0 : index + 1)}
                 className="btn btn-circle"
+                onClick={scrollToSlide(
+                  index + 1 >= slides.length ? 0 : index + 1,
+                )}
               >
                 ❯
               </a>
@@ -45,11 +57,11 @@ export default function Component({ slides }: Props) {
           </div>
         ))}
       </div>
-      <div className="flex justify-center w-full py-2 gap-2">
+      <div className="flex mt-4 justify-center w-full py-2 gap-4">
         {slides.map((_, index) => (
           <a
-            href={"#slide" + index}
-            className="w-2 h-2 bg-secondary-500 rounded-full cursor-pointer"
+            onClick={scrollToSlide(index)}
+            className="w-[5px] h-[5px] bg-secondary-500 rounded-full cursor-pointer"
           />
         ))}
       </div>
