@@ -47,7 +47,7 @@ interface DepositionProps {
 function Bubble({ text }: { text: string }) {
   return (
     <div class="bg-white p-4 rounded-badge chat-bubble">
-      <p class="text-sm text-primary-600">{text}</p>
+      <div class="text-sm text-primary-600">{text}</div>
     </div>
   );
 }
@@ -58,8 +58,8 @@ function Deposition({ text, name, role, avatar }: DepositionProps) {
       <Bubble text={text} />
       <div class="w-full flex gap-2 items-center justify-end mt-4">
         <div class="flex flex-col items-end">
-          <p class="text-white text-lg font-semibold">{name}</p>
-          <p class="text-white text-md font-medium">{role}</p>
+          <div class="text-white text-lg font-semibold">{name}</div>
+          <div class="text-white text-md font-medium">{role}</div>
         </div>
         <Avatar src={avatar ?? ""} />
       </div>

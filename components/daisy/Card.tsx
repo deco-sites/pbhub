@@ -32,7 +32,7 @@ export default function Card(props: Props) {
       {(!imageOnBottom || imageOnSide) && <CardImage image={image} />}
       <div className="card-body">
         <h2 className="card-title">{title}</h2>
-        <p>{subtitle}</p>
+        <div>{subtitle}</div>
         {callToAction && (
           <div className="card-actions justify-end">
             <a href={callToAction.href}>

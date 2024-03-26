@@ -40,9 +40,9 @@ export default function ImageGallery({
       <h1 class="text-base-content text-4xl text-center mt-10 mb-4 lg:text-6xl lg:mb-6">
         {title}
       </h1>
-      <p class="text-center text-base-content text-2xl leading-7">
+      <div class="text-center text-base-content text-2xl leading-7">
         {description}
-      </p>
+      </div>
       <div class="grid grid-cols-2 gap-4 mt-11 lg:flex lg:gap-8 lg:mt-20">
         <img
           class="min-w-full object-cover max-w-[156px] max-h-[156px] "

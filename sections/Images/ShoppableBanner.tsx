@@ -130,9 +130,9 @@ export default function ShoppableBanner(props: Props) {
           <h2 class={`card-title flex ${title?.layout?.position}`}>
             {title?.content}
           </h2>
-          <p class={`text-base-content ${text?.layout?.position}`}>
+          <div class={`text-base-content ${text?.layout?.position}`}>
             {text?.content}
-          </p>
+          </div>
           <div class={`card-actions ${link?.layout?.position}`}>
             <a class="underline" href={link?.href}>{link?.text}</a>
           </div>

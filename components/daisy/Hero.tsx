@@ -25,7 +25,7 @@ export default function Hero(props: Props) {
         )}
         <div className={image ? "" : "max-w-md"}>
           <h1 className="text-5xl font-bold">{title}</h1>
-          <p className="py-6">{description}</p>
+          <div className="py-6">{description}</div>
           {cta && (
             <a href={cta.href}>
               <button className="btn btn-primary">{cta.text}</button>

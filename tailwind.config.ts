@@ -10,6 +10,9 @@ export default {
       animation: {
         sliding: "sliding 30s linear infinite",
       },
+      boxShadow: {
+        cardShadow: "-4px 4px 8px rgba(0, 0, 0, 0.2)",
+      },
       colors: {
         primary: {
           50: "#F4F0F6",

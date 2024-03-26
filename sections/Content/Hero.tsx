@@ -66,9 +66,9 @@ export default function HeroFlats({
               }}
             >
             </div>
-            <p class="text-zinc-400 text-[16px] md:text-[18px] leading-[150%]">
+            <div class="text-zinc-400 text-[16px] md:text-[18px] leading-[150%]">
               {description}
-            </p>
+            </div>
             <div class="flex flex-col items-center lg:items-start lg:flex-row gap-4">
               {cta?.map((item) => (
                 <a

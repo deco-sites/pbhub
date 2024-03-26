@@ -108,15 +108,15 @@ const Testimonal = ({ image, text, user }: Testimonial) => (
       <div class="flex flex-col">
         {user?.name &&
           (
-            <p class="text-lg">
+            <div class="text-lg">
               {user?.name}
-            </p>
+            </div>
           )}
         {(user?.position || user?.company) &&
           (
-            <p class="text-lg">
+            <div class="text-lg">
               {user?.position}, {user?.company}
-            </p>
+            </div>
           )}
       </div>
     </div>

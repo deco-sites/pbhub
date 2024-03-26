@@ -46,7 +46,7 @@ export default function ImagePresentation({
   buttons,
 }: Props) {
   return (
-    <div class="w-full bg-[#e6e8e6]">
+    <div class="w-full bg-gray-100 py-16 md:py-8">
       <div
         class={`flex lg:container lg:max-w-7xl lg:mx-auto mx-5 md:mx-10 justify-evenly ${
           PLACEMENT[placement ?? "left"]
@@ -66,22 +66,22 @@ export default function ImagePresentation({
         />
         <div class="w-full lg:w-1/2 space-y-2 lg:space-y-4 lg:max-w-xl gap-4 z-10">
           <div class="flex flex-col gap-3">
-            <p class="text-[40px] leading-[110%] font-normal text-primary-500">
+            <div class="text-[40px] leading-[110%] font-normal text-primary-500">
               {title || "Section Title"}
-            </p>
+            </div>
             {subtitle && (
-              <p class="text-[33px] leading-[100%] text-primary-500 font-semibold">
+              <div class="text-[33px] leading-[100%] text-primary-500 font-semibold">
                 {subtitle}
-              </p>
+              </div>
             )}
           </div>
 
-          <p class="text-primary-500 text-[15px] md:text-[18px] leading-[150%]">
+          <div class="text-primary-500 text-[15px] max-md:mt-8 md:text-[18px] leading-[150%]">
             {description || "Section Description"}
-          </p>
+          </div>
           {buttons?.map((button) => (
             <a
-              class="px-4 py-2 inline-flex rounded-[10px] justify-center items-center gap-2 border-none text-primary-50 bg-[#3b115d] transition-colors duration-200 cursor-pointer"
+              class="px-4 py-2 mt-8 inline-flex rounded-[10px] justify-center items-center gap-2 border-none text-primary-50 bg-[#3b115d] transition-colors duration-200 cursor-pointer"
               href={button.href}
             >
               <span>{button.label}</span>

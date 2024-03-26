@@ -32,7 +32,7 @@ function FeatureCard({ icon, title, text }: Card) {
             dangerouslySetInnerHTML={{ __html: title }}
           />
         )}
-        <p class="leading-[120%]" dangerouslySetInnerHTML={{ __html: text }} />
+        <div class="leading-[120%]" dangerouslySetInnerHTML={{ __html: text }} />
       </div>
     </div>
   );

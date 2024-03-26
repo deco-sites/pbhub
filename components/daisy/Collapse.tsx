@@ -10,7 +10,7 @@ export default function Collapse(props: Props) {
     <div tabIndex={0} className="collapse bg-base-200">
       <div className="collapse-title text-xl font-medium">{title}</div>
       <div className="collapse-content">
-        <p>{subtitle}</p>
+        <div>{subtitle}</div>
       </div>
     </div>
   );

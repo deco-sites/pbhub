@@ -143,11 +143,11 @@ function Links(props: Props) {
         )}
 
         {header?.description && (
-          <p
+          <div
             style={{ color: header.textColor }}
           >
             {header?.description}
-          </p>
+          </div>
         )}
       </header>
 
@@ -215,11 +215,11 @@ function Links(props: Props) {
               target="_blank"
             >
               {props.footer.text && (
-                <p
+                <div
                   style={{ color: header.textColor }}
                 >
                   {props.footer.text}
-                </p>
+                </div>
               )}
               {props.footer.image && (
                 <Image

@@ -66,9 +66,9 @@ interface CardProps {
 function Card({ label, icon }: CardProps) {
   return (
     <div class="w-full flex flex-col align-middle items-center justify-center xl:justify-normal h-64 sm:h-48 p-4 bg-primary-600 rounded-badge shadow-md">
-      <p class="mt-2 text-lg font-semibold text-primary-100">
+      <div class="mt-2 text-lg font-semibold text-primary-100">
         {label}
-      </p>
+      </div>
       <div class="mt-2">
         {icon}
       </div>

@@ -17,7 +17,7 @@ export default function Ecosystem(
   }: Props,
 ) {
   return (
-    <div class="w-full bg-white justify-center flex-col gap-10 py-6">
+    <div class="w-full py-16 bg-white justify-center flex-col gap-10 md:py-8">
       <h2 class="text-4xl text-center text-primary-500 font-semibold">
         Nosso ecossistema
       </h2>
@@ -32,17 +32,17 @@ export default function Ecosystem(
               <span class="text-secondary-600 text-3xl sm:text-5xl font-semibold">
                 {numberOfProjects || "+"}
               </span>
-              <p class="text-center text-primary-500 font-semibold text-sm sm:text:2xl">
+              <div class="text-center text-primary-500 font-semibold text-sm sm:text:2xl">
                 Projetos executados
-              </p>
+              </div>
             </div>
             <div class="flex flex-col aspect-square gap-1 rounded-full justify-center items-center  w-32 h-32 sm:w-44 p-6 sm:h-44 bg-gray-200">
               <span class="text-secondary-600 text-3xl sm:text-5xl font-semibold">
                 {numberOfProfessionals || "+"}
               </span>
-              <p class="text-center text-primary-500 font-semibold text-sm sm:text:2xl">
+              <div class="text-center text-primary-500 font-semibold text-sm sm:text:2xl">
                 Novos profissionais engajados
-              </p>
+              </div>
             </div>
           </div>
           {headquarters && (
