@@ -48,6 +48,9 @@ export default {
           "100%": { transform: "translateX(-50%)" },
         },
       },
+      screen: {
+        screen320: "320px",
+      },
     },
   },
 };
