@@ -26,9 +26,8 @@ export default function ConnectingBridges({
         </div>
 
         <div class="flex flex-col md:flex-col gap-[10px] w-full 2xl:w-[70%]">
-          {subtitle && (
-            <p class="md:text-[16px] text-primary-550">{subtitle}</p>
-          )}
+          {subtitle && <p class="md:text-[16px] text-primary-550">{subtitle}
+          </p>}
           {description && (
             <p class="md:text-[16px] text-primary-550">{description}</p>
           )}

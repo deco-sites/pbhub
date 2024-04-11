@@ -60,7 +60,7 @@ export default function Component({ slides }: Props) {
               <a
                 className="btn btn-outline btn-[#36185C]"
                 onClick={scrollToSlide(
-                  index - 1 < 0 ? slides.length - 1 : index - 1
+                  index - 1 < 0 ? slides.length - 1 : index - 1,
                 )}
               >
                 ❮
@@ -68,7 +68,7 @@ export default function Component({ slides }: Props) {
               <a
                 className="btn btn-outline btn-[#36185C]"
                 onClick={scrollToSlide(
-                  index + 1 >= slides.length ? 0 : index + 1
+                  index + 1 >= slides.length ? 0 : index + 1,
                 )}
               >
                 ❯
