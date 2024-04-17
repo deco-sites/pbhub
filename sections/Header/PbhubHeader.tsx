@@ -58,7 +58,8 @@ function PbhubHeader({
   iconButtons = [
     {
       icon: "WhatsApp",
-      url: "/",
+      url:
+        "https://api.whatsapp.com/send/?phone=5511989833697&text&type=phone_number&app_absent=0",
     },
     {
       icon: "Instagram",
@@ -66,7 +67,7 @@ function PbhubHeader({
     },
     {
       icon: "Linkedin",
-      url: "/",
+      url: "https://www.linkedin.com/company/pbhubsolucoes",
     },
     {
       icon: "Message",
@@ -87,7 +88,7 @@ function PbhubHeader({
 
         <PbhubNavBar item={navItems as SiteNavigationElement[]} />
 
-        <div class="flex items-center lg:gap-2">
+        <div class="lg:flex hidden items-center lg:gap-2">
           {iconButtons.map((button) => (
             <ButtonWithIcon icon={button.icon} url={button.url} />
           ))}
