@@ -63,7 +63,7 @@ function Section({
         justify?.mobile && flex.justify.mobile[justify.mobile],
         justify?.desktop && flex.justify.desktop[justify.desktop],
         wrap?.mobile && flex.wrap.mobile[wrap.mobile],
-        wrap?.desktop && flex.wrap.desktop[wrap.desktop]
+        wrap?.desktop && flex.wrap.desktop[wrap.desktop],
       )}
     >
       {children}
