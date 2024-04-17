@@ -33,18 +33,23 @@ export default function Component({ slides }: Props) {
             id={"slide" + index}
             class="carousel-item relative w-full flex flex-col items-center justify-center gap-[40px]"
           >
-            <div class="w-[50%] 2xl:w-[30%] flex flex-col gap-[16px] items-center">
+            <div class="w-[90%] sm:w-[50%] 2xl:w-[30%] flex flex-col gap-[16px] items-center">
               <h2 class="text-3xl md:text-[42px] text-primary-550 font-sans text-center md:text-start font-semibold">
                 {items.title}
               </h2>
-              <p class="text-[16px] md:text-[22px] text-primary-550 text-center">
+              <p class="text-[16px] md:text-[20px] text-primary-550 text-center">
                 {items.subtitle}
               </p>
             </div>
 
-            <div class="flex justify-around items-center w-full">
+            <div class="flex justify-around items-center w-full mt-5 sm:mt-0">
               {items.slideInfo.map((image, index) => (
-                <div class="flex flex-col gap-4 items-center justify-center">
+                <div
+                  id="image-container"
+                  class={`flex flex-col gap-4 items-center justify-center ${
+                    index === 3 ? "hidden" : "sm:flex"
+                  } last:hidden md:last:flex`}
+                >
                   <img
                     src={image.image}
                     width={image.imageDescription === "Mobile" ? 34 : 60}
@@ -56,20 +61,24 @@ export default function Component({ slides }: Props) {
                 </div>
               ))}
             </div>
-            <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+            <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2 mb-4 ">
               <a
-                className="btn btn-outline btn-[#36185C]"
-                onClick={scrollToSlide(
-                  index - 1 < 0 ? slides.length - 1 : index - 1,
-                )}
+                className={`btn btn-ghost hover:text-white bg-white border-0 ${
+                  index === 0 ? "hover:bg-gray-500" : "hover:bg-[#36185C]"
+                } ${index === 0 ? "disabled" : ""}`}
+                onClick={index > 0 ? scrollToSlide(index - 1) : undefined}
               >
                 ❮
               </a>
               <a
-                className="btn btn-outline btn-[#36185C]"
-                onClick={scrollToSlide(
-                  index + 1 >= slides.length ? 0 : index + 1,
-                )}
+                className={`btn btn-ghost bg-white hover:text-white border-0 ${
+                  index === slides.length - 1
+                    ? "hover:bg-gray-500"
+                    : "hover:bg-[#36185C]"
+                } ${index === slides.length - 1 ? "disabled" : ""}`}
+                onClick={index < slides.length - 1
+                  ? scrollToSlide(index + 1)
+                  : undefined}
               >
                 ❯
               </a>

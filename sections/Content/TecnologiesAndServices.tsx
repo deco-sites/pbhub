@@ -48,20 +48,20 @@ export default function TecnologiesAndServices({
           imageDescription: "Ideação & Discovery",
         },
         {
-          image: "/image/tecnologiesAndSolutions/mobile.png",
-          imageDescription: "Mobile",
+          image: "/image/tecnologiesAndSolutions/consultories.png",
+          imageDescription: "Consultorias",
         },
         {
-          image: "/image/tecnologiesAndSolutions/mobile.png",
-          imageDescription: "Mobile",
+          image: "/image/tecnologiesAndSolutions/solutionsDevelopment.png",
+          imageDescription: "Desenvolvimento de Soluções",
         },
         {
-          image: "/image/tecnologiesAndSolutions/mobile.png",
-          imageDescription: "Mobile",
+          image: "/image/tecnologiesAndSolutions/squadAsAService.png",
+          imageDescription: "Squad as a Service",
         },
         {
-          image: "/image/tecnologiesAndSolutions/mobile.png",
-          imageDescription: "Mobile",
+          image: "/image/tecnologiesAndSolutions/digitalTransformation.png",
+          imageDescription: "Transformação Digital",
         },
       ],
     },
