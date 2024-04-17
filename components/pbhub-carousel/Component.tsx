@@ -32,13 +32,11 @@ export default function Component({ slides }: Props) {
     <>
       <div className="carousel w-full">
         {slides.map((variation) =>
-          variation.variant === "1" ? (
-            <Variant1 slides={slides} />
-          ) : variation.variant === "2" ? (
-            <Variant2 slides={slides} />
-          ) : (
-            <Variant3 slides={slides} />
-          )
+          variation.variant === "1"
+            ? <Variant1 slides={slides} />
+            : variation.variant === "2"
+            ? <Variant2 slides={slides} />
+            : <Variant3 slides={slides} />
         )}
       </div>
       <div className="flex mt-4 justify-center w-full py-2 gap-4">
@@ -49,7 +47,6 @@ export default function Component({ slides }: Props) {
           />
         ))}
       </div>
-       
     </>
   );
 }

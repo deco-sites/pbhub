@@ -37,16 +37,15 @@ export default function Variant3({ slides }: Props) {
             </a>
             <a
               className={`btn btn-ghost bg-white hover:text-white border-0`}
-              onClick={
-                index < slides.length - 1 ? scrollToSlide(index + 1) : undefined
-              }
+              onClick={index < slides.length - 1
+                ? scrollToSlide(index + 1)
+                : undefined}
             >
               ❯
             </a>
           </div>
         </div>
       ))}
-       
     </>
   );
 }
